@@ -39,6 +39,39 @@ class BPMNEditor:
         """  
         if element_type not in ["task", "gateway", "event"]:  
             raise ValueError("Недопустимый тип элемента")  
+    
+    def remove_element(self, element_id: int) -> None:
+        """
+        Удаляет элемент с холста.
+        
+        Args:
+            element_id (int): Идентификатор элемента.
+        """
+        pass
+    
+    def export_diagram(self, file_path: str) -> None:
+        """
+        Экспортирует диаграмму в файл.
+        
+        Args:
+            file_path (str): Путь к файлу для сохранения.
+        """
+        pass
+    
+    def validate_diagram(self) -> bool:
+        """
+        Проверяет диаграмму на корректность.
+        
+        Returns:
+            bool: True, если диаграмма корректна, иначе False.
+        """
+        return True
+    
+    def simulate_process(self) -> None:
+        """
+        Симулирует выполнение BPMN процесса.
+        """
+        pass
     </pre>
     
     <h2>Пример выполнения BPMN модели</h2>
