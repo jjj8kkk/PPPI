@@ -1,13 +1,24 @@
-class BPMNEditor:  
-    """  
-    Класс для создания и редактирования BPMN-диаграмм.  
+class BPMNEditor:
+    """Класс для создания и редактирования BPMN-диаграмм.
 
-    Attributes:  
-        canvas (Canvas): Холст для отрисовки элементов.  
-        elements (list): Список элементов диаграммы.  
-    """  
+    Пример использования:
 
-    def add_element(self, element_type: str, x: int, y: int) -> None:  
+    .. code-block:: python
+
+        editor = BPMNEditor()
+        editor.add_element('task', 100, 200)
+
+    Attributes:
+        canvas (Canvas): Холст для отрисовки элементов
+        elements (list): Список элементов диаграммы
+    """
+
+    def __init__(self):
+        """Инициализация редактора"""
+        self.canvas = None
+        self.elements = []
+
+    def add_element(self, element_type: str, x: int, y: int) -> None:
         """  
         Добавляет элемент на холст.  
 
